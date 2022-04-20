@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="allow_access">allow access</string>
+    <string name="text1">Thank you for installing our video player app</string>
+    <string name="text2">Please give access to to this for playing video in the device</string>
+    <string name="folder_name">folder name</string>
+</resources>
