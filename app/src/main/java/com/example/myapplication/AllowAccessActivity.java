@@ -65,6 +65,7 @@ public class AllowAccessActivity extends AppCompatActivity {
                      }
                   }).create().show();
                } else {
+                  
                   ActivityCompat.requestPermissions(AllowAccessActivity.this, new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, STORAGE_PERMISSION);
                }
             } else {
