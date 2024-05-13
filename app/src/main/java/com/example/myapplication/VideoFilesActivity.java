@@ -56,7 +56,7 @@ public class VideoFilesActivity extends AppCompatActivity {
             @SuppressLint("Range") String size = cursor.getString(cursor.getColumnIndex(MediaStore.Video.Media.SIZE));
             @SuppressLint("Range") String duration = cursor.getString(cursor.getColumnIndex(MediaStore.Video.Media.DURATION));
             @SuppressLint("Range") String path = cursor.getString(cursor.getColumnIndex(MediaStore.Video.Media.DATA));
-            @SuppressLint("Range") String dateAdded = cursor.getString(cursor.getColumnIndex(MediaStore.Video.Media.DATA));
+            @SuppressLint("Range") String dateAdded = cursor.getString(cursor.getColumnIndex(MediaStore.Video.Media.DATE_ADDED));
             MediaFiles mediaFiles = new MediaFiles(id, title, displayName, size, duration, path, dateAdded);
             videoFiles.add(mediaFiles);
          } while (cursor.moveToNext());
