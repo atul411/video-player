@@ -26,12 +26,16 @@ class AllowAccessActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_allow_access)
         allowBtn = findViewById(R.id.allow_access)
+        if (ContextCompat.checkSelfPermission(applicationContext, Manifest.permission.READ_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED) {
+            startActivity(Intent(this, MainActivity::class.java))
+            finish()
+        }
         allowBtn.setOnClickListener {
             if (ContextCompat.checkSelfPermission(applicationContext, Manifest.permission.READ_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED) {
                 startActivity(Intent(this, MainActivity::class.java))
                 finish()
             } else {
-                ActivityCompat.requestPermissions(this, arrayOf(Manifest.permission.WRITE_EXTERNAL_STORAGE), STORAGE_PERMISSION)
+                ActivityCompat.requestPermissions(this, arrayOf(Manifest.permission.READ_EXTERNAL_STORAGE), STORAGE_PERMISSION)
             }
         }
     }
@@ -53,7 +57,7 @@ class AllowAccessActivity : AppCompatActivity() {
                             .create()
                             .show()
                     } else {
-                        ActivityCompat.requestPermissions(this, arrayOf(Manifest.permission.WRITE_EXTERNAL_STORAGE), STORAGE_PERMISSION)
+                        ActivityCompat.requestPermissions(this, arrayOf(Manifest.permission.READ_EXTERNAL_STORAGE), STORAGE_PERMISSION)
                     }
                 } else {
                     startActivity(Intent(this, MainActivity::class.java))
