@@ -1,15 +1,31 @@
+# IntelliJ IDEA / Android Studio
+.idea/
 *.iml
-.gradle
-/local.properties
-/.idea/caches
-/.idea/libraries
-/.idea/modules.xml
-/.idea/workspace.xml
-/.idea/navEditor.xml
-/.idea/assetWizardSettings.xml
-.DS_Store
-/build
-/captures
-.externalNativeBuild
-.cxx
+*.ipr
+*.iws
+
+# Gradle
+.gradle/
+gradle/wrapper/gradle-wrapper.jar
+build/
+app/build/
+**/build/
+
+# Android local config
 local.properties
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Native build
+.externalNativeBuild/
+.cxx/
+
+# Keystore (never commit)
+*.jks
+*.keystore
+
+# Captures / profiling
+/captures/
+*.hprof
